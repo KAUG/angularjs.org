@@ -53,13 +53,13 @@
       });
       $script('google-code-prettify/prettify.min.js', bootstrap);
       $script('js/homepage.js', bootstrap);
-      $script('http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js', bootstrap);
-      $script('http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular-resource.min.js', bootstrap);
-      $script('http://code.angularjs.org/1.0.3/i18n/angular-locale_sk.js', function() {
+      $script('http://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js', bootstrap);
+      $script('http://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular-resource.min.js', bootstrap);
+      $script('http://code.angularjs.org/1.0.4/i18n/angular-locale_sk.js', function() {
         angular.module('ngLocal.sk', [])._invokeQueue.push(angular.module('ngLocale')._invokeQueue[0]);
         bootstrap();
       });
-      $script('http://code.angularjs.org/1.0.3/i18n/angular-locale_en-us.js', function() {
+      $script('http://code.angularjs.org/1.0.4/i18n/angular-locale_en-us.js', function() {
         angular.module('ngLocal.us', [])._invokeQueue.push(angular.module('ngLocale')._invokeQueue[0]);
         bootstrap();
       });
@@ -84,7 +84,7 @@
   </script>
   <script>
     /*
-    AngularJS v1.0.3
+    AngularJS v1.0.4
     (c) 2010-2012 Google, Inc. http://angularjs.org
     License: MIT
     */
@@ -105,17 +105,17 @@
           </a>
           <ul class="nav">
             <li class="divider-vertical"></li>
-            <li class="active"><a href="#"><i class="icon-home icon-white"></i> Home</a></li>
+            <li class="active"><a href="http://angularjs.org/"><i class="icon-home icon-white"></i> Home</a></li>
             <li class="divider-vertical"></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <i class="icon-eye-open icon-white"></i> Learn <b class="caret"></b>
               </a>
               <ul class="dropdown-menu">
-                <li class="disabled"><a href="http://angularjs.org/">Why AngularJS?</a></li>
-                <li><a href="http://www.youtube.com/user/angularjs">Watch</a></li>
+                <li class="disabled"><a href="">Home</a></li>
+                <li><a href="http://www.youtube.com/user/angularjs">Videos</a></li>
                 <li><a href="http://docs.angularjs.org/tutorial">Tutorial</a></li>
-                <li><a href="http://builtwith.angularjs.org/">Case Studies</a></li>
+                <li><a href="http://builtwith.angularjs.org">Case Studies</a></li>
                 <li><a href="https://github.com/angular/angular-seed">Seed App project template</a></li>
                 <li><a href="http://docs.angularjs.org/misc/faq">FAQ</a></li>
               </ul>
@@ -166,12 +166,6 @@
     <div class="row" style="padding-top: 80px;">
       <div class="span12">
 
-        <div class="alert alert-success center">
-          Are you a JS ninja? Would you like to become superhero, fight evil, and change the way web apps are written?
-          Awesome, because
-          <a href="https://plus.google.com/112439678898563138768/posts/AtGh51aC9JR"><strong>we are hiring</strong>!</a>
-        </div>
-
         <div class="hero-unit" style="height: 350px;">
           <div class="center">
             <img class="AngularJS-large" src="img/AngularJS-large.png">
@@ -187,7 +181,7 @@
 
             <a class="btn btn-large btn-primary" href="" ng-click="lightbox('stable')">
               <i class="icon-download-alt icon-large"></i> Download
-              <span class="version"> (<span>1.0.3/1.1.1</span>) </span>
+              <span class="version"> (<span>1.0.4/1.1.2</span>) </span>
             </a>
 
           </div>
@@ -434,7 +428,7 @@
 
   <footer class="footer">
     <div class="container">
-      <p class="pull-right"><a href="#">Back to top</a></p>
+      <p class="pull-right"><a href="#" target="_self">Back to top</a></p>
       <p>Super-powered by Google  ©2010-2012</p>
       <p>Code licensed under the
         <a href="https://github.com/angular/angular.js/blob/master/LICENSE" target="_blank">The
@@ -896,8 +890,9 @@
             <span class="btn-group" data-toggle="buttons-radio">
               <button id="bluePill" type="button" ng-class="getPillClass('stable', currentBranch)" class="btn bluePill" ng-click="selectType('stable')">Stable</button>
               <button id="redPill" type="button" ng-class="getPillClass('unstable', currentBranch)" class="btn redPill"  ng-click="selectType('unstable')">Unstable</button>
+              <a id="extraInfoBranch" href="" rel="popover" data-original-title="Branches" data-content="<dl class='dl-horizontal'><dt>Stable</dt><dd>The Release has been well tested, and the API for this version will not undergo any further change.</dd><dt>Unstable</dt><dd>This version is still being worked on, and API's are subject to change without any prior notice. Use only if you want to remain on the most cutting edge...</dd></dl>"><i class="icon-question-sign"></i></a>
             </span>
-            <a id="extraInfoBranch" href="" rel="popover" data-original-title="Branches" data-content="<dl class='dl-horizontal'><dt>Stable</dt><dd>The Release has been well tested, and the API for this version will not undergo any further change.</dd><dt>Unstable</dt><dd>This version is still being worked on, and API's are subject to change without any prior notice. Use only if you want to remain on the most cutting edge...</dd></dl>"><i class="icon-question-sign"></i></a>
+
           </span>
 
         </dd>
@@ -908,8 +903,9 @@
               <button type="button" class="btn" ng-class="getPillClass('minified', currentBuild)" ng-click="selectBuild('minified')" ng-class="get">Minified</button>
               <button type="button" class="btn" ng-class="getPillClass('uncompressed', currentBuild)" ng-click="selectBuild('uncompressed')">Uncompressed</button>
               <button type="button" class="btn" ng-class="getPillClass('zipped', currentBuild)" ng-click="selectBuild('zipped')">Zip</button>
+              <a id="extraInfoBuild" href="" rel="popover" data-original-title="Branches" data-content="<dl class='dl-horizontal'><dt>Minified</dt><dd>Minified and obfuscated version of the AngularJS base code. Use this in your deployed application (but only if you can't use Google's CDN)</dd><dt>Uncompressed</dt><dd>The main AngularJS source code, as is. Useful for debugging and development purpose, but should ideally not be used in your deployed application</dd><dt>Zipped</dt><dd>The zipped version of the Angular Build, which contains both the builds of AngularJS, as well as documentation and other extras</dd></dl>"><i class="icon-question-sign"></i></a>
             </span>
-            <a id="extraInfoBuild" href="" rel="popover" data-original-title="Branches" data-content="<dl class='dl-horizontal'><dt>Minified</dt><dd>Minified and obfuscated version of the AngularJS base code. Use this in your deployed application (but only if you can't use Google's CDN)</dd><dt>Uncompressed</dt><dd>The main AngularJS source code, as is. Useful for debugging and development purpose, but should ideally not be used in your deployed application</dd><dt>Zipped</dt><dd>The zipped version of the Angular Build, which contains both the builds of AngularJS, as well as documentation and other extras</dd></dl>"><i class="icon-question-sign"></i></a>
+
           </span>
 
         </dd>
