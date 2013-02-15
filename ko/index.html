@@ -224,7 +224,8 @@
         <p>
           HTML는 정적 문서를 선언하기엔 큰 장점을 가진다. 하지만 웹 어플리케이션에서 동적인 뷰를 사용하려면 앞서 말한 장점들이 모두 날라가 버린다.
           AngularJS는 웹 어플리케이션에서 HTML의 표현의 범위을 확장해 준다.
-          그 결과 놀라울 정도의 표현력으로 읽기 쉬우며 빠르게 개발이 가능한 환경을 제공할 수 있다. (??)
+          그 결과 놀라울 정도의 표현력으로 읽기 쉬우며 빠른 개발이 가능한 환경을 제공한다.
+          <br>
           HTML is great for declaring static documents, but it falters when we try to use it for
           declaring dynamic views in web-applications. AngularJS lets you extend HTML vocabulary
           for your application. The resulting environment is extraordinarily expressive, readable,
@@ -234,6 +235,9 @@
       <div class="span4">
         <h1>대체할 만한 프레임워크 (Alternatives)</h1>
         <p>
+        	다른 프레임워크들은 HTML, CSS 그리고 자바스크립트의 추상화하거나 DOM을 관리하는 방법을 제공하여 HTML 단점을 보완하고자 한다.
+        	위 두가지 방법 모두 동적인 뷰를 위해 설계되지 않은 HTML의 근본적인 문제점을 가지고 있다. 
+        	<br>
           Other frameworks deal with HTML’s shortcomings by either abstracting away HTML, CSS,
           and/or JavaScript or by providing an imperative way for manipulating the DOM. Neither of
           these address the root problem that HTML was not designed for dynamic views.
@@ -250,7 +254,7 @@
       </div>
     </div>
 
-    <h1 id="the-basics">The Basics</h1>
+    <h1 id="the-basics">기본 (The Basics)</h1>
     <div class="row example">
       <div class="span8 app-source" app-source="hello.html" annotate="hello.annotation"></div>
       <div class="span4">
@@ -272,6 +276,9 @@
       <div class="span4">
         <h3>데이터 바인딩 (Data Binding)</h3>
         <p>
+        	데이터 바인딩은 모델이나 뷰의 변경에 따라 뷰나 모델에 자동으로 반영하는 방법이다.
+        	이 기능은 DOM 조작으로 인한 엄청난 수고를 덜어낼 수 있다.
+        	<br>
           Data-binding is an automatic way of updating the view whenever the model changes, as
           well as updating the model whenever the view changes. This is awesome because it
           eliminates DOM manipulation from the list of things you have to worry about.
@@ -286,7 +293,7 @@
         </p>
       </div>
       <div class="span4">
-        <h3>Plain JavaScript</h3>
+        <h3>보통 자바스크립트(Plain JavaScript)</h3>
         <p>
           Unlike other frameworks, there is no need to inherit from proprietary types; to wrap the
           model in accessors methods. Just plain old JavaScript here. This makes your code easy to
@@ -321,7 +328,7 @@
     <h1 id="wire-up-a-backend">Wire up a Backend</h1>
     <div class="row">
       <div class="span4">
-        <h3>Deep Linking</h3>
+        <h3>깊은 연결 (Deep Linking)</h3>
         <p>
           A deep link reflects where the user is in the app, this is useful so users can bookmark
           and email links to locations within apps. Round trip apps get this automatically, but
@@ -330,7 +337,7 @@
         </p>
       </div>
       <div class="span4">
-        <h3>Form Validation</h3>
+        <h3>폼 검증 (Form Validation)</h3>
         <p>
           Client-side form validation is an important part of great user experience.
           AngularJS lets you declare the validation rules of the form without having to write
@@ -338,7 +345,7 @@
         </p>
       </div>
       <div class="span4">
-        <h3>Server Communication</h3>
+        <h3>서버 커뮤니케이션 (Server Communication)</h3>
         <p>
           AngularJS provides services on top of XHR, that dramatically simplify your code. We wrap
           XHR to give you exception management and promises. Promises further simplify your code
@@ -370,6 +377,9 @@
       <div class="span4">
         <h3>다이렉티브 (Directives)</h3>
         <p>
+          다이렉티브들은 Angular에서만 사용 가능한 고유하고 강력한 특징이다. 
+          다이렉티브들은 어플리케이션만의 특유한 새로운 HTML 문법을 만들 수 있다.
+          <br>
           Directives is a unique and powerful feature available only in Angular. Directives let
           you invent new HTML syntax, specific to your application.
         </p>
