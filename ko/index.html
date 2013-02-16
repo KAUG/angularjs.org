@@ -236,7 +236,7 @@
         <h1>대체할 만한 프레임워크 (Alternatives)</h1>
         <p>
         	다른 프레임워크들은 HTML, CSS 그리고 자바스크립트의 추상화하거나 DOM을 관리하는 방법을 제공하여 HTML 단점을 보완하고자 한다.
-        	위 두가지 방법 모두 동적인 뷰를 위해 설계되지 않은 HTML의 근본적인 문제점을 가지고 있다. 
+        	위 두가지 방법 모두 동적인 뷰를 위해 설계되지 않은 HTML의 근본적인 문제점을 가지고 있다.
         	<br>
           Other frameworks deal with HTML’s shortcomings by either abstracting away HTML, CSS,
           and/or JavaScript or by providing an imperative way for manipulating the DOM. Neither of
@@ -246,6 +246,9 @@
       <div class="span4">
         <h1>확장 가능성 (Extensibility)</h1>
         <p>
+          AngularJS은 어플리케이션 개발에 최적의 프레임워크를 구축하기위한 도구 세트이다.
+          그것은 완벽하게 확장 가능하며, 다른 라이브러리와 함께 사용해도 잘 작동한다. 모든 기능은 당신 자신의 개발 흐름과 요구에 맞추어 변경하거나 교체 할 수 있다. 그 방법을 알기 위해 계속 읽어 보면 된다.
+          <br>
           AngularJS is a toolset for building the framework most suited to your application
           development. It is fully extensible and works well with other libraries. Every feature
           can be modified or replaced to suit your unique development workflow and feature needs.
@@ -287,6 +290,9 @@
       <div class="span4">
         <h3>컨트롤러 (Controller)</h3>
         <p>
+          컨트롤러는 DOM 엘리먼트 뒤의 행위이다. 
+          AngularJS는 DOM을 업데이트하고 콜백을 등록하거나 모델의 변경을 감지하는 보통의 표준 방법없이 깔끔하고 읽기 쉬운 형식으로 표현할 수 있다. 
+         <br>
           Controllers are the behavior behind the DOM elements. AngularJS lets you express the
           behavior in a clean readable form without the usual boilerplate of updating the DOM,
           registering callbacks or watching model changes.
@@ -295,6 +301,8 @@
       <div class="span4">
         <h3>보통 자바스크립트(Plain JavaScript)</h3>
         <p>
+          다른 프레임워크들과는 달리 메소드 접근자의 모델을 감싸기 위해 독점적인 타입을 상속할 필요가 없다. 단지 기존의 보통 자바스크립트이면 된다. 이러한 접근 방법이 코드를 쉽게 테스트, 유지보수, 재사용 그리고 boilerplate로부터 자유롭게 한다.   
+          <br>
           Unlike other frameworks, there is no need to inherit from proprietary types; to wrap the
           model in accessors methods. Just plain old JavaScript here. This makes your code easy to
           test, maintain, reuse, and again free from boilerplate.
@@ -330,6 +338,10 @@
       <div class="span4">
         <h3>깊은 연결 (Deep Linking)</h3>
         <p>
+          딥 링크는 사용자가 어플리케이션에서 어디에 있는지를 나타내는 것이다. 
+          이 것은 사용자들이 어플리케이션 내에서 위치를 북마크하거나 이메일로 링크하는데 유용할 것이다. 
+          Round trip 어플리케이션에서는 이것은 자동으로 얻을 수있는 것이었지만, AJAX 어플리케이션은 그 특성상 그렇지 않다. AngularJS는 딥 링크와 데스크톱 응용 프로그램과 같은 행동을 할 수 있습니다.
+          <br>
           A deep link reflects where the user is in the app, this is useful so users can bookmark
           and email links to locations within apps. Round trip apps get this automatically, but
           AJAX apps by their nature do not. AngularJS combines the benefits of deep link with
@@ -339,6 +351,8 @@
       <div class="span4">
         <h3>폼 검증 (Form Validation)</h3>
         <p>
+          클라이언트 측 폼 유효성 검사는 뛰어난 사용자 경험을 위한 중요한 부분이다. AngularJS는 JavaScript 코드를 작성하지 않고 폼에 유효성 검사 규칙을 선언 할 수 있다. 적은 코드로 작성하고, 빨리 끝낼 수 있다.
+          <br>
           Client-side form validation is an important part of great user experience.
           AngularJS lets you declare the validation rules of the form without having to write
           JavaScript code. Write less code, go have beer sooner.
@@ -347,6 +361,11 @@
       <div class="span4">
         <h3>서버 커뮤니케이션 (Server Communication)</h3>
         <p>
+          AngularJS는 XHR 위에서 서비스를 제공하는데, 코드를 매우 간단하게 해준다.
+          우리는 XHR을 감싸서 예외 management나 promise를 제공한다. 
+          Promise는 데이터의 리턴을 비동기적으로 처리하여 코드를 더 간단하게 한다.
+          리턴이 실제로 비동기적일 때 속성들을 동기적으로 할당하게 해준다.
+           <br>
           AngularJS provides services on top of XHR, that dramatically simplify your code. We wrap
           XHR to give you exception management and promises. Promises further simplify your code
           by handling asynchronous return of data. This lets you assign properties synchronously
@@ -375,10 +394,10 @@
     <h1 id="create-components">Create Components</h1>
     <div class="row">
       <div class="span4">
-        <h3>다이렉티브 (Directives)</h3>
+        <h3>지시어 (Directives)</h3>
         <p>
-          다이렉티브들은 Angular에서만 사용 가능한 고유하고 강력한 특징이다. 
-          다이렉티브들은 어플리케이션만의 특유한 새로운 HTML 문법을 만들 수 있다.
+          지시어들은 Angular에서만 사용 가능한 고유하고 강력한 특징이다. 
+          지시어들은 어플리케이션만의 특유한 새로운 HTML 문법을 만들 수 있다.
           <br>
           Directives is a unique and powerful feature available only in Angular. Directives let
           you invent new HTML syntax, specific to your application.
@@ -387,6 +406,8 @@
       <div class="span4">
         <h3>재 사용 가능한 컴포넌트 (Reusable Components)</h3>
         <p>
+          우리는 재사용 가능한 컴포넌트를 만드는데 지시어를 사용하고 있다. 컴포넌트를 사용하여 복잡한 DOM 구조와 CSS, 그리고 동작  수 있습니다. 따라서 어플리케이션으로 무엇을 하거나, 어플리케이션을 어떻게 개별적으로 보일지에 초점을 맞출 수 있다.
+          <br>
           We use directives to create reusable components. A component allows you to hide complex
           DOM structure, CSS, and behavior. This lets you focus either on what the application
           does or how the application looks separately.
@@ -395,6 +416,8 @@
       <div class="span4">
         <h3>지역화 (Localization)</h3>
         <p>
+          지역화는 어플리케이션에서 매우 중요한 부분이다. Angular의 로케일 인식 필터와 형태소 분석 지침이 모든 로케일에서 사용가능한 어플리케이션을 만들수 있도록 기본 요소를 제공한다.
+          <br>
           An important part of serious apps is localization. Angular's locale aware filters and
           stemming directives give you building blocks to make your application available in all
           locales.
@@ -422,6 +445,8 @@
       <div class="span4">
         <h3>Embeddable</h3>
         <p>
+          AngularJS는 다른 기술과 함께 사용해도 제대로 작동한다. 기존의 페이지에 원하는대로 많게든 적게든 AngularJS을 추가 할 수 있다. 많은 다른 프레임워크는 전체 반영을 요구한다. 이 페이지에는 여러 AngularJS 어플리케이션이 포함되어 있습니다. AngularJS은 글로벌 상태가 없는 여러가지 어플리케이션이 단일 페이지에서 <code>iframe</code>을 사용하지 않고 여러 응용 프로그램을 실행시킬 수 있다. 자, view-source하고 둘러보자.
+          <br>
           AngularJS works great with other technologies. Add as much or as little of AngularJS to
           an existing page as you like. Many other frameworks require full commitment. This page
           has multiple AngularJS applications embedded in it. Because AngularJS has no global
@@ -432,6 +457,10 @@
       <div class="span4">
         <h3>Injectable</h3>
         <p>
+          AngularJS에서 의존성 주입은 선언적으로 어플리케이션 어떻게 연결되어 있는지를 기술한다.
+          이것은 어플리케이션이 <code>main()</code> 메서드를 필요하지 않음을 의미하며 보통 
+          의존성 주입은 AngularJS의 핵심이다. 이것은 요구에 맞지 않는 어떤 컴포넌트라도 쉽게 교체될 수 있음을 뜻한다.
+          <br>
           The dependency injection in AngularJS allows you to declaratively describe how your
           application is wired. This means that your application needs no <code>main()</code>
           method which is usually an unmaintainable mess. Dependency injection is also a core to
@@ -442,6 +471,9 @@
       <div class="span4">
         <h3>Testable</h3>
         <p>
+          AngularJS는 완벽하게 테스트가 가능하도록 설계되었다. 그것은 behavior-view 분리, mocks로 미리 번들로 제공되어 있으며, 의존성 주입을 최대한 활용하길 권장한다.
+          또한 AngularJS의 내부의 작동 방식을 이해하여 테스트 괴짜성을 제거하여 end-to-end 시나리오 러너가 제공됩니다.
+          <br>
           AngularJS was designed from ground up to be testable. It encourages behavior-view
           separation, comes pre-bundled with mocks, and takes full advantage of dependency
           injection. It also comes with end-to-end scenario runner which eliminates test flakiness
