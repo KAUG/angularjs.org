@@ -5,7 +5,7 @@ var express = require('express'),
 var app = express();
 
 app.configure(function(){
-  app.set('port', process.env.PORT || 8000);
+  app.set('port', process.env.PORT || 8008);
   app.use(express.logger('dev'));
   app.use(express.static(path.join(__dirname, '/ko')));
   app.use('/css', express.static(path.join(__dirname, '/css')));
