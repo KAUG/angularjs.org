@@ -56,13 +56,13 @@
       });
       $script('google-code-prettify/prettify.min.js', bootstrap);
       $script('js/homepage.js', bootstrap);
-      $script('http://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js', bootstrap);
-      $script('http://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular-resource.min.js', bootstrap);
-      $script('http://code.angularjs.org/1.0.4/i18n/angular-locale_sk.js', function() {
+      $script('http://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js', bootstrap);
+      $script('http://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular-resource.min.js', bootstrap);
+      $script('http://code.angularjs.org/1.0.6/i18n/angular-locale_sk.js', function() {
         angular.module('ngLocal.sk', [])._invokeQueue.push(angular.module('ngLocale')._invokeQueue[0]);
         bootstrap();
       });
-      $script('http://code.angularjs.org/1.0.4/i18n/angular-locale_en-us.js', function() {
+      $script('http://code.angularjs.org/1.0.6/i18n/angular-locale_en-us.js', function() {
         angular.module('ngLocal.us', [])._invokeQueue.push(angular.module('ngLocale')._invokeQueue[0]);
         bootstrap();
       });
@@ -87,7 +87,7 @@
   </script>
   <script>
     /*
-    AngularJS v1.0.4
+    AngularJS v1.0.6
     (c) 2010-2012 Google, Inc. http://angularjs.org
     License: MIT
     */
@@ -148,22 +148,10 @@
                 <li class="divider"></li>
                 <li><a href="https://twitter.com/#!/angularjs">Twitter</a></li>
                 <li><a href="https://plus.google.com/110323587230527980117">Google+</a></li>
+                <li><a href="https://plus.google.com/communities/109067040035659120428">GDG Korea WebTech</a></li>
                 <li class="divider"></li>
                 <li><a href="https://github.com/angular/angular.js">GitHub</a></li>
                 <li><a href="https://github.com/angular/angular.js/issues">Issue Tracker</a></li>
-              </ul>
-            </li>
-            <li class="divider-vertical"></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <i class="icon-comment icon-white"></i> KAUG <b class="caret"></b>
-              </a>
-              <ul class="dropdown-menu">
-                <li><a href="http://blog.angularjs.org">Blog</a></li>
-                <li class="divider"></li>
-                <li><a href="http://www.facebook.com/groups/Korea.AngularJS.User.Group/">Facebook</a></li>
-                <li class="divider"></li>
-                <li><a href="https://github.com/KoreaAngularJSUserGroup/">GitHub</a></li>
               </ul>
             </li>
             <li class="divider-vertical"></li>
@@ -197,7 +185,7 @@
 
             <a class="btn btn-large btn-primary" href="" ng-click="lightbox('stable')">
               <i class="icon-download-alt icon-large"></i> Download
-              <span class="version"> (<span>1.0.4/1.1.2</span>) </span>
+              <span class="version"> (<span>1.0.6/1.1.4</span>) </span>
             </a>
 
           </div>
@@ -983,8 +971,8 @@
             </span>
 
           </span>
-
         </dd>
+
         <dt>CDN</dt>
         <dd>
           <span class="input-append">
@@ -992,12 +980,20 @@
             <a id="extraInfoCDN" href="" rel="popover" data-original-title="Why Google CDN?" data-content="While downloading and using the AngularJS source code is great for development, we recommend that you source the script from Google's CDN (Content Delivery Network) in your deployed, customer facing app whenever possible. You get the following advantages for doing so: <ul><li><strong>Better Caching :</strong> If you host AngularJS yourself, your users will have to download the source code atleast once. But if the browser sees that you are referring to Google CDN's version of AngularJS, and your user has visited another app which uses AngularJS, then he can avail the benefits of caching, and thus reduce one download, speeding up his overall experience!</li><li><strong>Decreased Latency :</strong> Google's CDN distributes your static content across the globe, in various diverse, physical locations. It increases the odds that the user gets a version of AngularJS served from a location near him, thus reducing overall latency.</li><li><strong>Increased Parallelism : </strong>Using Google's CDN reduces one request to your domain. Depending on the browser, the number of parallel requests it can make to a domain is restricted (as low as 2 in IE 7). So it can make a gigantic difference in loading times for users of those browsers.</li></ul>"><i class="icon-question-sign"></i></a>
           </span>
         </dd>
+
+        <dt>Bower</dt>
+          <dd>
+            <span class="input-append">
+              <input class="input-xxlarge" type="text" readonly="readonly" value="bower install angular">
+              <a id="extraInfoBower" href="" rel="popover" data-original-title="Bower란?" data-content="Bower는 클라이언트 부문에서의 JavaScript 컴포넌트들을 위한 페키지 관리 도구입니다.<br><br>더 자세한 정보는 이 곳에서 보세요. : http://twitter.github.com/bower/"><i class="icon-question-sign"></i></a>
+            </span>
+          </dd>
       </dl>
 
     </div>
     <div class="modal-footer">
-      <a ng-href="http://code.angularjs.org/{{getVersion(currentBranch)}}">Extras</a>
-      <a href="http://code.angularjs.org/">Previous Versions</a>
+      <a ng-href="http://code.angularjs.org/{{getVersion(currentBranch)}}">기타</a>
+      <a href="http://code.angularjs.org/">이전 버젼</a>
 
       <a class="btn btn-primary btn-large" style="float: right; font-size: 20px; padding-left: 20px;" ng-href="{{downloadLink()}}" download><i class="icon-download-alt icon-large"></i> Download</a>
     </div>
