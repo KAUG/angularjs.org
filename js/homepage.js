@@ -83,7 +83,8 @@ angular.module('homepage', [])
 
     return {
       angular: '<script src="https://ajax.googleapis.com/ajax/libs/angularjs/' + angular.version.full + '/angular.min.js"></script>\n',
-      resource: '<script src="https://ajax.googleapis.com/ajax/libs/angularjs/' + angular.version.full + '/angular-resource.min.js"></script>\n'
+      resource: '<script src="https://ajax.googleapis.com/ajax/libs/angularjs/' + angular.version.full + '/angular-resource.min.js"></script>\n',
+      firebase: '<script src="https://cdn.firebase.com/v0/firebase.js"></script>\n    <script src="http://firebase.github.io/angularFire/angularFire.js"></script>\n'
     };
   })
 
@@ -147,6 +148,7 @@ angular.module('homepage', [])
                 '  <head>\n' +
                 '    ' + script.angular +
                (attrs.resource ? ('    ' + script.resource.replace('></', '>\n    </')) : '') +
+               (attrs.firebase ? ('    ' + script.firebase) : '') +
                 '__HEAD__' +
                 '  </head>\n' +
                 '  <body>\n' +
@@ -303,8 +305,8 @@ angular.module('homepage', [])
   })
 
     .controller('DownloadCtrl', function($scope, $location) {
-      var CURRENT_STABLE_VERSION = '1.0.6';
-      var CURRENT_UNSTABLE_VERSION = '1.1.4';
+      var CURRENT_STABLE_VERSION = '1.0.7';
+      var CURRENT_UNSTABLE_VERSION = '1.2.0rc1';
       var BASE_CODE_ANGULAR_URL = 'http://code.angularjs.org/';
       var BASE_CDN_URL = 'https://ajax.googleapis.com/ajax/libs/angularjs/';
       var getRelativeUrl = function(branch, build) {
