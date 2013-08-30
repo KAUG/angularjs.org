@@ -298,9 +298,9 @@ angular.module('homepage', [])
 
   .directive('hint', function() {
     return {
-      template: '<em>Hint:</em> hover over ' +
+      template: '<em>힌트:</em> 마우스를 올려보세요. ' +
           '<code class="nocode" rel="popover" title="Hover" ' +
-          'data-content="Place your mouse over highlighted areas in the code for explanations.">me</code>.'
+          'data-content="하이라이트된 부분에 마우스를 올리세요. 설명을 볼 수 있습니다.">나에게</code>.'
     }
   })
 
